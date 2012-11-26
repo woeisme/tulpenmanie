@@ -447,7 +447,7 @@ class MtgoxOrdersRequest(MtgoxPrivateRequest):
             if order_type == u'ask':
                 if pair not in asks:
                     asks[pair] = list()
-                ask[pair].append((order_id, price, amount,))
+                asks[pair].append((order_id, price, amount,))
             elif order_type == u'bid':
                 if pair not in bids:
                     bids[pair] = list()

@@ -46,9 +46,8 @@ class OrdersModel(QtGui.QStandardItemModel):
         b_suffix = self.get_base_suffix()
 
         for order_id, price, amount, in orders:
-            print type(c_precision)
-            print type(price)
-            print type(amount)
+            price = float(price)
+            amount = float(amount)
             if c_precision:
                 price = round(price, c_precision)
             if b_precision:
