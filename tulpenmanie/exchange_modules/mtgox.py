@@ -177,9 +177,9 @@ class MtgoxTickerRequest(tulpenmanie.network.ExchangePOSTRequest):
         path = self.url.path().split('/')
         remote_market = str(path[3])
         proxy = self.parent._ticker_proxies[remote_market]
-        proxy.ask_signal.emit(data['buy'])
+        proxy.ask_signal.emit(data['sell'])
         proxy.last_signal.emit(data['last'])
-        proxy.bid_signal.emit(data['sell'])
+        proxy.bid_signal.emit(data['buy'])
 
 
 class MtgoxTradesRequest(MtgoxPublicRequest):
