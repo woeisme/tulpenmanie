@@ -73,8 +73,8 @@ class EditWidget(QtGui.QWidget):
                 mapper.setSubmitPolicy(QtGui.QDataWidgetMapper.AutoSubmit)
                 self.mappers.append(mapper)
 
-                check_state = bool(markets_item.child(
-                    row, exchange_item.MARKET_ENABLE).text())
+                check_state = markets_item.child(
+                    row, exchange_item.MARKET_ENABLE).text() == 'true'
                 remote_label = QtGui.QLabel(
                     markets_item.child(
                         row, exchange_item.MARKET_REMOTE).text())
